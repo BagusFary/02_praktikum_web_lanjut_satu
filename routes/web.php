@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,14 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function() {
-    echo "Selamat Datang";
-});
+// Route::get('/', function() {
+//     echo "Selamat Datang";
+// });
 
-Route::get('/about', function(){
-    echo "2213090 Bagus Fary Ananta";
-});
+// Route::get('/about', function(){
+//     echo "2213090 Bagus Fary Ananta";
+// });
 
-Route::get('/article/{id}', function($id){
-    echo "Halaman artikel dengan id " . $id;
-});
+// Route::get('/article/{id}', function($id){
+//     echo "Halaman artikel dengan id " . $id;
+// });
+
+
+Route::get('/', [PageController::class, 'index']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/article/{id}', [PageController::class, 'articles']);
