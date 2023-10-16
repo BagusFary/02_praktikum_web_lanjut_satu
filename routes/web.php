@@ -31,6 +31,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [AboutController::class, 'index']);
-Route::get('/article/{id}', [ArticleController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about', [AboutController::class, 'index']);
+// Route::get('/article/{id}', [ArticleController::class, 'index']);
